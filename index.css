@@ -25,6 +25,11 @@
     background: #ffffff50;
 }
 
+*::-webkit-scrollbar-thumb:active {
+    background: #ffffff70;
+}
+
+
 /* bold */
 @font-face {
     font-family: 'Urbanist';
