@@ -8,9 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="index.css">
     <!-- favicon is client/media/icon.svg -->
-    <link rel="icon" href="assets/media/icon_no_bg.svg" type="image/svg+xml">
-    <link rel="icon" href="assets/media/icon_no_bg.png" type="image/png"> <!-- if svg doesn't work -->
-    <meta name="theme-color" content="#5b2e61">
+    <link rel="icon" href="assets/media/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#522d60">
     <meta name="title" content="Simulo">
     <meta name="description" content="Landing page for Simulo, upcoming 2D physics sandbox">
     <meta property="og:type" content="website">
@@ -25,125 +24,138 @@
 </head>
 
 <body>
+    <div class="background-circle"></div>
     <img src="assets/media/logo.svg" alt="Simulo" class="logo" />
-    <p class="welcome">Welcome to the Simulo landing page!</p>
-    <p>Simulo is an upcoming 2D physics simulation sandbox app by <a href="https://github.com/Carroted"
-            target="_blank">Carroted</a>. It's being written in <a href="https://www.rust-lang.org"
-            target="_blank">Rust</a>, using our <a href="https://discord.gg/Ky7JXDztFM" target="_blank">Lightspeed</a>
-        physics engine <span class="emdash">&mdash;</span> a
-        port of <a href="https://github.com/erincatto/box2c" target="_blank">Box2D v3</a> to Rust, which we will then
-        add <a href="https://google.github.io/liquidfun/" target="_blank">LiquidFun</a> to.</p>
+    <div class="content-container">
+        <p class="welcome">Welcome to the Simulo landing page!</p>
+        <p>Simulo is an upcoming 2D physics simulation sandbox by <a href="https://github.com/Carroted"
+                target="_blank">Carroted</a>. It's being written in <a href="https://www.rust-lang.org"
+                target="_blank">Rust</a>, using the <a href="https://github.com/erincatto/box2c" target="_blank">Box2D
+                v3</a> physics engine. We are also using the <a href="https://bevyengine.org" target="_blank">Bevy game
+                engine</a>.
 
-    <div class="project-status">
-        <h2>Project Status</h2>
-        <span class="status indev">In active development</span>
-        <p>We are currently working on the physics engine for Simulo, <a href="https://discord.gg/Ky7JXDztFM"
-                target="_blank">Lightspeed</a>. Once it is done, we can make the Simulo runtime and then the game
-            itself.</p>
-        <span class="estimation-title">Estimated release</span>
-        <div class="estimation">Unknown, we are still working on the physics and haven't even started
-            on the game yet, so how would we know?</div>
-        <p class="join-notice">For real-time updates, join the <a href="https://discord.gg/raceRsDaSX"
-                target="_blank">Simulo Discord</a> and the <a href="https://discord.gg/Ky7JXDztFM"
-                target="_blank">Lightspeed Discord</a>, as both will have Simulo news.</p>
+        <div class="project-status">
+            <h2>Project Status</h2>
+            <span class="status indev">In active development</span>
+            <p>Simulo is in a state where we have powerful in-game Lua scripting which we have used to make a platformer
+                game, a
+                3D renderer, Tetris, etc. We can also use in-game tools to build vehicles, buildings, etc. Development
+                is going really well!</p>
+            <span class="estimation-title">Estimated release</span>
+            <div class="estimation">Probably sometime in 2025</div>
+            <p class="join-notice">For real-time updates, join the <a href="https://discord.gg/raceRsDaSX"
+                    target="_blank">Simulo Discord</a>.</p>
+        </div>
+
+        <p>Throughout its history, Simulo has had 3 rewrites. Here is a table of the Simulos:</p>
+
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Year</th>
+                    <th>Description</th>
+                    <th>Fate</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td>Simulo Unity</td>
+                    <td><span class="status unsupported">Unsupported</span></td>
+                    <td>2021</td>
+                    <td class="long">First version of Simulo, written in <a href="https://unity.com/"
+                            target="_blank">Unity</a>.
+                        It was very simple, but was packed with fun
+                        features like ragdolls, lasers, thrusters, and more.</td>
+                    <td class="long">Unity was very limiting, and the project would not have been able to develop in the
+                        way
+                        I
+                        wanted it to
+                        with that engine. Thus, I decided to try to rewrite it as a web game.</td>
+                    <td><a href="https://drive.google.com/drive/folders/1DuwH_vcDOEDn0vwYOhW6YMlDoIJu8-NS?usp=share_link"
+                            target="_blank">Try it</a></td>
+                </tr>
+                <tr>
+                    <td>Bimulo</td>
+                    <td><span class="status unsupported">Unsupported</span></td>
+                    <td>2022</td>
+                    <td class="long">Second version of Simulo, initially written in JavaScript, but later migrated to
+                        TypeScript. It was a lot more advanced than
+                        the Unity version, and introduced many of the features of <a href="http://www.algodoo.com/"
+                            target="_blank">Algodoo</a>. This version was exclusively a web
+                        game, and thus desktop versions would've been <a href="https://www.electronjs.org/"
+                            target="_blank">Electron</a> apps.</td>
+                    <td class="long">The codebase was a mess, and the game was slow. I decided to rewrite the engine
+                        with
+                        what I
+                        learned from Bimulo.</td>
+                    <td><a href="https://carroted.github.io/Bimulo/client" target="_blank">Try it</a></td>
+                </tr>
+                <tr>
+                    <td>Simulo NT</td>
+                    <td><span class="status unsupported">Unsupported</span></td>
+                    <td>2023</td>
+                    <td class="long">Third version of Simulo, a rewrite of Bimulo. Simulo NT's custom web engine was a
+                        modular
+                        multiplayer-driven engine with a plugin-based architecture, where every aspect of a game is
+                        defined
+                        with
+                        plugins. NT introduced faster physics and rendering, as well as a new UI.</td>
+                    <td class="long">
+                        <p>While development was much faster in this engine and the codebase was a pleasure to work
+                            with, the game was too stuttery. These random stutters seemed to just be a web limitation
+                            that
+                            might
+                            not
+                            be possible to remove. In addition, the new physics engine used (<a href="https://rapier.rs"
+                                target="_blank">Rapier</a>) was unstable and crashing
+                            frequently.</p>
+                        <p>Lastly, NT failed to address some of Bimulo's problems, like desktop and mobile versions. As
+                            a
+                            web
+                            game
+                            still, desktop versions would've been <a href="https://www.electronjs.org/"
+                                target="_blank">Electron</a> apps, while people were looking for a desktop app
+                            like
+                            Algodoo.</p>
+                        <p>For all these reasons, I decided to rewrite Simulo for the final time, this time
+                            in
+                            Rust as a native <a href="https://bevyengine.org/" target="_blank">Bevy</a> app.</p>
+                    </td>
+                    <td><a href="https://carroted.github.io/Simulo-NT/client" target="_blank">Try it</a></td>
+                </tr>
+                <tr>
+                    <td>Simulo Next</td>
+                    <td><span class="status indev">In active development</span></td>
+                    <td>2024+</td>
+                    <td class="long">
+                        <p>The final Simulo, in a full Rust rewrite. It is split into two parts: a Simulo
+                            runtime, and a <a href="https://bevyengine.org/" target="_blank">Bevy</a> client.</p>
+                        <p>The runtime is just
+                            a layer over Box2D to add save/load,
+                            Lua scripting, etc. The client will use the
+                            runtime
+                            and
+                            support desktop, and later mobile.
+                        </p>
+                    </td>
+                    <td class="long">
+                        <p>Simulo Next is currently in development, and with the runtime being separate from the
+                            client, there will never be a need to rewrite again.</p>
+                        <p>Simulo
+                            Next will be supported for a very long time, and I intend on publishing it to Steam.</p>
+                    </td>
+                    <td>None yet</td>
+                </tr>
+            </table>
+        </div>
+
+        <p class="final-p">Check out the <a href="faq">FAQ</a> if you still have questions, or join the <a
+                href="https://discord.gg/raceRsDaSX" target="_blank">Simulo Discord</a> and the <a
+                href="https://discord.gg/Ky7JXDztFM" target="_blank">Lightspeed Discord</a>, as both will have Simulo
+            news.
+        </p>
     </div>
-
-    <p>Throughout its history, Simulo has had 3 rewrites. Here is a table of the Simulos:</p>
-
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Status</th>
-            <th>Year</th>
-            <th>Description</th>
-            <th>Fate</th>
-            <th>Link</th>
-        </tr>
-        <tr>
-            <td>Simulo Unity</td>
-            <td><span class="status unsupported">Unsupported</span></td>
-            <td>2021</td>
-            <td class="long">First version of Simulo, written in <a href="https://unity.com/" target="_blank">Unity</a>.
-                It was very simple, but was packed with fun
-                features like ragdolls, lasers, thrusters, and more.</td>
-            <td class="long">Unity was very limiting, and the project would not have been able to develop in the way I
-                wanted it to
-                with that engine. Thus, I decided to try to rewrite it as a web game.</td>
-            <td><a href="https://drive.google.com/drive/folders/1DuwH_vcDOEDn0vwYOhW6YMlDoIJu8-NS?usp=share_link"
-                    target="_blank">Try it</a></td>
-        </tr>
-        <tr>
-            <td>Bimulo</td>
-            <td><span class="status unsupported">Unsupported</span></td>
-            <td>2022</td>
-            <td class="long">Second version of Simulo, initially written in JavaScript, but later migrated to
-                TypeScript. It was a lot more advanced than
-                the Unity version, and introduced many of the features of <a href="http://www.algodoo.com/"
-                    target="_blank">Algodoo</a>. This version was exclusively a web
-                game, and thus desktop versions would've been <a href="https://www.electronjs.org/"
-                    target="_blank">Electron</a> apps.</td>
-            <td class="long">The codebase was a mess, and the game was slow. I decided to rewrite the engine with what I
-                learned from Bimulo.</td>
-            <td><a href="https://carroted.github.io/Bimulo/client" target="_blank">Try it</a></td>
-        </tr>
-        <tr>
-            <td>Simulo NT</td>
-            <td><span class="status unsupported">Unsupported</span></td>
-            <td>2023</td>
-            <td class="long">Third version of Simulo, a rewrite of Bimulo. Simulo NT's custom web engine was a modular
-                multiplayer-driven engine with a plugin-based architecture, where every aspect of a game is defined with
-                plugins. NT introduced faster physics and rendering, as well as a new UI.</td>
-            <td class="long">
-                <p>While development was much faster in this engine and the codebase was a pleasure to work
-                    with, the game was too stuttery. These random stutters seemed to just be a web limitation that might
-                    not
-                    be possible to remove. In addition, the new physics engine used (<a href="https://rapier.rs"
-                        target="_blank">Rapier</a>) was unstable and crashing
-                    frequently.</p>
-                <p>Lastly, NT failed to address some of Bimulo's problems, like desktop and mobile versions. As a web
-                    game
-                    still, desktop versions would've been <a href="https://www.electronjs.org/"
-                        target="_blank">Electron</a> apps, while people were looking for a desktop app
-                    like
-                    Algodoo.</p>
-                <p>For all these reasons, I decided to rewrite Simulo for the final time, this time
-                    in
-                    Rust as a native <a href="https://bevyengine.org/" target="_blank">Bevy</a> app.</p>
-            </td>
-            <td><a href="https://carroted.github.io/Simulo-NT/client" target="_blank">Try it</a></td>
-        </tr>
-        <tr>
-            <td>Simulo Next</td>
-            <td><span class="status indev">In active development</span></td>
-            <td>2024+</td>
-            <td class="long">
-                <p>The final Simulo, in a full Rust rewrite. It will be split into two parts: a Simulo
-                    runtime, and a <a href="https://bevyengine.org/" target="_blank">Bevy</a> client.</p>
-                <p>The runtime will just
-                    be a simple layer over Lightspeed to add save/load,
-                    scripting, temperature simulation, electricity, and other features. The client will use the runtime
-                    and
-                    support desktop, mobile and web. <a href="https://www.lua.org/" target="_blank">Lua</a> scripting
-                    (specifically <a href="https://luau-lang.org/" target="_blank">Luau</a>) and modding will be
-                    supported.
-                </p>
-            </td>
-            <td class="long">
-                <p>Simulo Next is currently in development, and with the runtime being separate from the
-                    client, there will never be a need to rewrite again.</p>
-                <p>Even if I want to switch engines later down the
-                    line, it won't affect anything, saves will work the same, and the same game code will be used.</p>
-                <p>Simulo
-                    Next will be supported for a very long time, and I intend on publishing it to Steam.</p>
-            </td>
-            <td>None yet</td>
-        </tr>
-    </table>
-
-    <p class="final-p">Check out the <a href="faq">FAQ</a> if you still have questions, or join the <a
-            href="https://discord.gg/raceRsDaSX" target="_blank">Simulo Discord</a> and the <a
-            href="https://discord.gg/Ky7JXDztFM" target="_blank">Lightspeed Discord</a>, as both will have Simulo news.
-    </p>
 </body>
 
 </html>

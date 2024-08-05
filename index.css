@@ -3,7 +3,7 @@
     font-family: 'Urbanist';
     font-style: normal;
     font-weight: 400;
-    src: url('assets/fonts/Urbanist-SemiBold.woff2') format('woff2');
+    src: url('assets/fonts/Urbanist-Medium.woff2') format('woff2');
 }
 
 *::selection {
@@ -29,48 +29,47 @@
     background: #ffffff70;
 }
 
-
 /* bold */
 @font-face {
     font-family: 'Urbanist';
     font-style: normal;
     font-weight: 600;
-    src: url('assets/fonts/Urbanist-Bold.woff2') format('woff2');
+    src: url('assets/fonts/Urbanist-SemiBold.woff2') format('woff2');
 }
 
-/* extra-bold */
-@font-face {
-    font-family: 'Urbanist';
-    font-style: normal;
-    font-weight: 800;
-    src: url('assets/fonts/Urbanist-ExtraBold.woff2') format('woff2');
+.background-circle {
+    position: fixed;
+    border-radius: 50%;
+    background: linear-gradient(#312435, #31243500 30%);
+    top: 40%;
+    left: -50%;
+    width: 200%;
+    aspect-ratio: 1;
+    z-index: -100;
 }
 
-@font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    src: url('assets/fonts/Inter-Regular.ttf') format('truetype');
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 55rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    background-color: #1d1121;
+    margin-bottom: 10rem;
 }
 
-@font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 800;
-    src: url('assets/fonts/Inter-Medium.ttf') format('truetype');
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    padding: 2rem;
+    background-color: #1d1121;
 }
-
-@font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 1000;
-    src: url('assets/fonts/Inter-SemiBold.ttf') format('truetype');
-}
-
-
 
 :root {
-    background: #0f0b16;
+    background: #271a2b;
     /* fill the entire screen with the background */
     min-height: 100vh;
     width: 100%;
@@ -85,16 +84,16 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Urbanist', sans-serif;
     line-height: 1.8;
     margin: 0;
     padding: 0;
+    color: #c7bdc9;
 }
 
 a {
     text-decoration: none;
-    color: #8c67f2;
-    font-weight: 800;
+    color: #e3a8ff;
 }
 
 a:hover {
@@ -115,7 +114,6 @@ a:hover {
 
 body {
     width: 100%;
-    max-width: 35rem;
     height: 100%;
     padding: 0;
     margin: 0;
@@ -123,7 +121,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 5rem;
+    padding-top: 10rem;
     align-items: center;
 }
 
@@ -181,14 +179,15 @@ td.long {
 }
 
 .logo {
-    height: 4rem;
-    margin-bottom: 2rem;
+    height: 6rem;
+    margin-bottom: 4rem;
 }
 
 .welcome {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     font-weight: 800;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    color: #e5d9e7;
 }
 
 .buttons {
@@ -407,6 +406,7 @@ header>nav a:visited {
     border-radius: 1000rem;
     font-weight: 800;
     font-size: 0.8rem;
+    margin-top: 0.4rem;
 }
 
 .status.unsupported {
@@ -424,8 +424,8 @@ header>nav a:visited {
     background: rgba(255, 255, 255, 0.1);
     padding: 2rem;
     border-radius: 1rem;
-    width: calc(100% + 15rem);
     margin-bottom: 2rem;
+    width: 100%;
 }
 
 .project-status .status {
@@ -452,6 +452,11 @@ header>nav a:visited {
     margin-bottom: 2rem;
 }
 
-p.final-p {
-    margin-block-end: 10rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #e5d9e7;
 }
